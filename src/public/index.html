@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Javascript FullStack</title>
+	<!--BOOTSTRAP-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<!--FONTAWESOME-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<!--CUSTOM-->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<nav class="navbar navbar-light bg-warning">
+	<a class="navbar-brand mx-auto" href="#">Javascript FullStack Chat</a>
+</nav>
+<div class="card col-md-4 mt-5 mx-auto" id="nickwrap">
+	<div class="card-header">
+		<h3>Enter your Username:</h3>
+	</div>
+
+	<p id="nickerror" class="text-danger"></p>
+	<div class="card-body">
+		<form id="nickform">
+			<input type="text" id="nickname" class="form-control">
+			<button type="submit"  class="btn btn-warning btn-block">
+				<i class="fas fa-location-arrow"></i>
+				Send
+			</button>
+		</form>
+	</div>
+</div>
+<div class="container" id="app">
+	<div class="row mt-4">
+		
+		<div class="col-md-6 offset-md-1">
+			<div class="card">
+				<div class="card-header">
+					<h4>Let's Chat</h4>
+				</div>
+				<div class="card-body" id="chat">
+				</div>
+				<form class="card-footer" id="message-form">
+					<div class="input-group">
+						<input type="text" id="message" class="form-control " required>
+						<div class="input-group-append">
+							<button type="submit"  class="btn btn-warning btn-block">
+								<i class="fas fa-location-arrow"></i>
+								Send
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-md-3 card">
+			<div class="card-header">Users</div>
+			<div class="card-body">
+				<div id="usernames"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/main.js" charset="utf-8"></script>
+</body>
+</html>
